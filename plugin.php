@@ -14,7 +14,7 @@ function wpfssl_core(){
 
 if ( FORCE_SSL && !is_ssl () )
  {
-  wp_redirect('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301 );
+  wp_safe_redirect('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301 );
   exit();
  }
 }
